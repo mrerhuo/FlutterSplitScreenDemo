@@ -1,4 +1,5 @@
 # FlutterSplitScreenDemo
 this is flutter split screen demo
-cd project directory
-flutter run
+\n cd project directory
+
+\n flutter run
