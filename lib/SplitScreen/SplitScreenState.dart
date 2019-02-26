@@ -21,24 +21,8 @@ class SplitScreenState extends State<SplitScreenWidget> {
           isLargeScreen = false;
         }
         //定义Row
-        // return Row(children: <Widget>[
-        //   Expanded(
-        //     child: DetailWidget("列表",(value) {
-        //       if (isLargeScreen) {
-        //         selectedValue = value;
-        //         setState(() {});
-        //       } else {
-        //         Navigator.push(context, MaterialPageRoute(
-        //           builder: (context) {
-        //             return OtherDetailWidget(car:value);
-        //           },
-        //         ));
-        //       }
-        //     }),
-        //   ),
-        //   isLargeScreen ? Expanded(child: DetailWidget(car:selectedValue)) : Container(),
-        // ]);
         return Row(children: <Widget>[
+          //flex:分屏比例值：1比2
           isLargeScreen
               ? Expanded(
                   child: ListWidget(
@@ -55,7 +39,8 @@ class SplitScreenState extends State<SplitScreenWidget> {
                           ));
                         }
                       }),
-                  flex: 1)
+                  flex: 1
+                  )
               : Container(),
           Expanded(child: DetailWidget(car: selectedValue), flex: 2),
         ]);
